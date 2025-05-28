@@ -8,7 +8,7 @@ import connectDB from './config/connect.js';
 import notFoundMiddleware from './middleware/not-found.js';
 import errorHandlerMiddleware from './middleware/error-handler.js';
 import authMiddleware from './middleware/authentication.js';
-
+import cors from 'cors';
 // Routers
 import authRouter from './routes/auth.js';
 import rideRouter from './routes/ride.js';
