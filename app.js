@@ -27,6 +27,9 @@ const server = http.createServer(app);
 
 const io = new socketIo(server, { cors: { origin: "*" } });
 
+app.use(cors({
+  origin: '*', // or Expo dev URL if you're securing it later
+}));
 // Attach the WebSocket instance to the request object
 app.use((req, res, next) => {
   req.io = io;
